@@ -1,0 +1,24 @@
+Broker is a server.
+Cluster is composed multiple machines(server).
+Each broker is identified by its number(integer).
+Each broker contains certain topic partitions.
+
+Partitions have replication factors which. should be greater than 1 so that other brokers can save the data. Even if one broker is lost other brokers can serve the ddata.
+At one time only ONE broker can be a leader for a given partition.
+Only that leader can receive ans serve the data. Others will synchronize the data.
+Thus each partition will have one leader and multiple ISR(in-sync-replicas)
+
+Producers write data to topics.
+Producers automatically know to which broker and partitions to write.
+Producers will recover automatically in case of broker failures.
+Producers can choose to receive acknowledgement of data written:
+acks=0       No acknowledgement
+acks=1       Leader acknowledge
+acks = all   Leader+replicas acknowledge
+
+Producers can choose to send a key with the message.
+Same key will always go to same partition.
+
+
+
+
