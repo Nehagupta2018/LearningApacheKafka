@@ -1,0 +1,26 @@
+Topics -- particular stream of data (similar to database tables), defined by its name.
+Partitions -- Topics are split into partitions and each partition is ordered.
+Offset -- Each message within a partition gets an incremental id called offset.
+
+To understand it in real time, leta take an example of truck company using kafka:
+
+Truck1, Truck2, Truck3........................................................................Truckn
+
+                   All sending messages to kafka topic (Message has truckID and truckGPS location)
+                   
+                   
+                                    Kafka (Truck-gps topic)
+
+
+                      Consumer1           Consumer2           Consumer3
+                      
+ Here Consumers can be mobile app, notification app or even more.
+ Consumers are partitions.
+ Offsets are the messages ID received by consumers.
+ 
+ Offsets only have a meaning for a specific partition. Order is guranteed within a partition not across partitions.
+ Data is kept for a limited time (default is one week)
+ Data written is immutable.
+ Data is assigned randomly to a partition unless a key is  provided.
+ 
+ 
