@@ -1,0 +1,23 @@
+Consumers read data from a topic.
+Consumers know which broker to read from
+Data is read in order within each partitions.
+
+Consumer is basically like a java application.
+Consumer groups consists of consumers.
+If you have more consumers than partitions then some consumers will be inactive.
+
+
+Consumer Offsets:
+The offsets committed live in kafka topic named _consumer_offsets
+If a consumer dies, it will be able to read back from where it left ogg thanks to the committed consumer topics.
+
+
+Every kafka broker is called a bootstrap server.
+You only need to connect to one broker and you will be connected to the entire cluster.
+
+
+Zookeepers hold the brokers together.
+Zookeeper helps in performing leader election for partitions.
+Zookeeper sends notofications to kafka in case of chnanges. So Kafka cannot work without Zookeepers.
+Zookeeper operates with an odd number of servers(3,5,7...)
+Zookeeper has a leader and the rest are followers.
