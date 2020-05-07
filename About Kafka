@@ -1,0 +1,22 @@
+Points:
+- Kafka is a high througput distributed messaging system.
+- It is created by LinkedIN
+- Open source tool
+- Now managed by a private Company named 'Confluent'
+- It has horizontal scalability (Can scale to millions of messages per second)
+- High performance
+
+
+Use Cases of Kafka:
+- Messaging System
+- Activity Tracking
+- Metrics gathering
+- Application logs gathering
+- Stream processing
+
+
+Examples:
+- Netflix uses Kafka to apply recommendations in real time while you are watching shows
+- LinkedIn uses it to recommend connections
+
+
