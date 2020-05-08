@@ -1,0 +1,19 @@
+Go to https://www.apache.org/
+Click on Download
+Check the version and hit sny scala under binary downloads.'
+Download will begin on mac.
+Go to shell and type mv Downloads/kafka_2.12-2.5.0.tgz .  (to move downloaded file to your root directory)
+then type tar -xvf kafka_2.12-2.5.0.tgz.  (to extract it)
+Do ls and check the kafka folder available
+cd into it and check for it working by typing
+bin/kafka-topics.sh
+
+
+If it doesnt work then you need to check java version on your machine.
+If you have older version then do ' brew tap caskroom/versions'
+brew cask install java8
+  Check the version installed using java -version
+  
+  
+  Go to your bash profile and add the bin path of kafka to it.
+
