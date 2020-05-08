@@ -1,0 +1,13 @@
+Create a directory called data in kafka folder and then create two separate directories inside it 
+1. zookeeper
+2. kafka
+
+Update the created zookeeper folder path in config/zookeeper.properties file and restart zookeeper using the command
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Open one more terminal window and do the same for kafka folder path. Update that path in config/server.properties. file.
+Start kafka by the command
+bin/kafak-server-start.sh config/server.properties.
+
+So now you will have zookeeper running in one window and kafka running in the other.
+
